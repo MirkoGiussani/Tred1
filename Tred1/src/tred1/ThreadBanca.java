@@ -11,11 +11,11 @@ package tred1;
  */
 public class ThreadBanca implements Runnable{
     Thread T;
-    String threadName;
+    //String threadName;
     contoCorrente conto;
     
-    public ThreadBanca(String name, contoCorrente conto) {
-        this.threadName = name;
+    public ThreadBanca(contoCorrente conto) {
+        //this.threadName = name;
         this.conto = conto;
         T = new Thread (this);
         T.start();
@@ -31,7 +31,7 @@ public class ThreadBanca implements Runnable{
         conto.prelievo(soldi);
     }
     
-    public void deposita(float soldi){
+    public void deposito(float soldi){
         conto.deposito(soldi);
     }
 }
